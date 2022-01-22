@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+
+  jenkins:
+    image: jenkins-nodejs
+    container_name: jenkins
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/var/jenkins_home
